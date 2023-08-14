@@ -1,8 +1,5 @@
-FROM ubuntu
+# simple dockerfile to test OCP s2i using Dockerfile
 
-RUN apt-get -y update && apt-get -y install nginx
-
-COPY default /etc/nginx/sites-available/default
-EXPOSE 80/tcp
-
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+FROM ubuntu:18.04
+CMD ["/bin/bash", "-c", "sleep infinity"]
+# CMD ["/bin/bash", "-c", "--", "while true; do sleep 30; done;"]
